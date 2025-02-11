@@ -34,11 +34,11 @@ spec:
         image: awsdevopsharsha/backend:v1
         envFrom:
         - configMapRef:
-          name: backend
+            name: backend  
 ---
 kind: Service
 apiVersion: v1
-metadata: 
+metadata:
   name: backend
   namespace: expense
 spec:
@@ -49,5 +49,5 @@ spec:
   ports:
   - name: backend-port
     protocol: TCP
-    port: 8080
-    targetPort: 8080
+    port: 8080 # service port
+    targetPort: 8080 # container port
