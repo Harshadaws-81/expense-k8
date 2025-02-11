@@ -18,7 +18,7 @@ metadata:
 spec:
   replicas: 2
   selector:
-    matchlabels:
+    matchLabels:
       app: backend
       tier: api
       project: expense
