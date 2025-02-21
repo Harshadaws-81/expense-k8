@@ -24,6 +24,14 @@ spec:
       containers:
       - name: frontend
         image: awsdevopsharsha/frontend:v1
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          # Limits should be Greater than or equal to Requests not less than
+          limits:
+            cpu: 100m
+            memory: 128Mi
 ---
 kind: Service
 apiVersion: v1
